@@ -1,7 +1,7 @@
 {
   "name": "web-ui",
   "version": "1.0.0",
-  "description": "Validator dashboard",
+  "description": "Verifiers dashboard",
   "author": "Adrian Vasile <contact@neatio.net>",
   "private": true,
   "scripts": {

@@ -11,16 +11,37 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Pirulen";
+  src: local("Pirulen"),
+   url(./fonts/pirulen.ttf) format("truetype");
+
+} 
+
+@font-face {
+  font-family: "Alien";
+  src: local("Alien"),
+   url(./fonts/alien.ttf) format("truetype");
+
+} 
+
+@font-face {
+  font-family: "Computer";
+  src: local("Computer"),
+   url(./fonts/cmunbbx.ttf) format("truetype");
+
+} 
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #00bfff;
+  color: #00ffff;
   min-width: 1200px;
   font-family: Helvetica;
 }
 .main {
-  background-image:  url('assets/hero-bg-new.jpg');
+  background-image:  url('assets/hero-bk.jpg');
   background-blend-mode: multiply;
   background-color: #2c3e50;
   background-size: cover;
@@ -42,6 +63,15 @@ export default {
   margin: 0px auto 0px auto;
   position: relative;
   text-align: left;
+
+  box-sizing: 1px;
+  
+  box-sizing: 1px;
+  border: none;
+  border: 1px solid #00ffffa4;
+
+  box-shadow: 0 0 40px #00bfff31;
+  
 }
 
 .box2 {
@@ -55,6 +85,13 @@ export default {
   margin: 0px auto 0px auto;
   position: relative;
   text-align: left;
+  box-sizing: 1px;
+  border: none;
+  border: 1px solid #00ffffa4;
+
+  box-shadow: 0 0 40px #00bfff31;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 
@@ -63,14 +100,14 @@ export default {
   font-size: 34px;
 }
 .el-radio__input.is-checked + .el-radio__label {
-  color: #00bfff;
+  color: #00ffff;
 }
 .el-radio__input.is-checked .el-radio__inner {
-  border-color: #00bfff;
-  background: #00bfff;
+  border-color: #00ffff;
+  background: #00ffff;
 }
 .el-radio__inner:hover {
-  border: 1px solid #00bfff;
+  border: 1px solid #00ffff;
 }
 .sk {
   color: rgba(102, 102, 102, 1);
@@ -102,15 +139,15 @@ export default {
 }
 
 .el-select .el-input.is-focus .el-input__inner {
-  border-color: #00bfff;
+  border-color: #00ffff;
 }
 .el-select .el-input__inner:focus {
-  border-color: #00bfff;
+  border-color: #00ffff;
 }
 .el-select-dropdown__item.selected {
-  color: #00bfff;
+  color: #00ffff;
 }
 .el-input.is-active .el-input__inner, .el-input__inner:focus {
-  border-color: #00bfff;
+  border-color: #00ffff;
 }
 </style>

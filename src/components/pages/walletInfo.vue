@@ -388,9 +388,9 @@ button {
 	font-family: Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	cursor: pointer;
-	color: #00BFFF;
-	box-shadow: inset 0 0 0.1em #00BFFF, 0 0 0.1em #00BFFF;
-	border: #00BFFF solid 1px;
+	color: #00ffff;
+	box-shadow: inset 0 0 0.1em #00ffff, 0 0 0.1em #00ffff;
+	border: #00ffff solid 1px;
 	background-color: #24292f;
   border-radius: 4px;
 	outline: none;
@@ -445,8 +445,9 @@ button {
  .dashboard{
     font-size:24px;
     font-weight:500;
-    color: #00bfFf;
+    color: #00ffff;
     padding: 60px;  
+    
  }
 
 
@@ -462,12 +463,12 @@ button {
   .rippleClaim:hover {
   color: #000;  
 	text-transform: uppercase;
-	background: #00BFFF radial-gradient(circle, transparent 1%, #00BFFF 1%) 
+	background: #00ffff radial-gradient(circle, transparent 1%, #00ffff 1%) 
 	center/15000%; 
   }
 
   .ripple:active {
-	background-color: #00BFFF;
+	background-color: #00ffff;
 	background-size: 100%;
 	transition: background 0s;
   }
@@ -475,7 +476,7 @@ button {
   .rippleUnreg {
   font-size: 12px;
   min-width: 100px;
-  color: #00bfff;
+  color: #00ffff;
 	background-position: center;
 	transition: background 0.4s;
   float: right;
@@ -499,7 +500,7 @@ button {
  .not-connected {
     font-size:16px;
     font-weight:240;
-    color: #00bfFf;
+    color: #00ffff;
     margin: auto;
     color: #a6ff33;
 
@@ -541,7 +542,7 @@ button {
       color: #000000;
       border: 1px solid #000;
       border-radius: 4px;
-      background-color: #00bfff;
+      background-color: #00ffff;
       font-size: 16px;
       cursor: pointer;
       margin: 0 auto;

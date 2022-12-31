@@ -183,7 +183,7 @@ export default {
 <style lang="scss">
 .nav-container {
   box-shadow: 0px 4px 8px 0px rgba(230, 230, 230, 0.6);
-  background-color: #24292f;
+  background-color: #001131;
   height: auto;
   .nav-panel {
     text-align: left;
@@ -208,7 +208,7 @@ export default {
         font-weight: 500;
 
         &:hover {
-          color: #00bfff;
+          color: #00ffff;
           transition: all .3s ease-in-out;
         }
         span {
@@ -232,7 +232,7 @@ export default {
 
         &:hover{
           .m-title {
-            color: #00bfff;
+            color: #00ffff;
           }
           .nav-icon {
             transform: rotate(180deg);
@@ -269,7 +269,7 @@ export default {
             &:hover {
               background-color: #f3f3f3;
               & > a {
-                color: #00bfff;
+                color: #00ffff;
               }
             }
           }
@@ -301,7 +301,7 @@ export default {
             margin-top: 8px;
           }
           .chain-dropdown-i:hover {
-            color: #00bfff;
+            color: #00ffff;
           }
         }
         .triangle {
@@ -316,16 +316,16 @@ export default {
         }
       }
       .nav-active {
-        color: #00bfff;
+        color: #00ffff;
       }
       .triangle-active {
-        border-color: #00bfff transparent transparent !important;
+        border-color: #00ffff transparent transparent !important;
       }
     }
     .help:hover {
-      color: #00bfff;
+      color: #00ffff;
       padding-bottom: 2px;
-      border-bottom: 2px solid #00bfff;
+      border-bottom: 2px solid #00ffff;
     }
     .conColor1 {
       color:red;
