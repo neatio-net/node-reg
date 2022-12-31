@@ -1,6 +1,6 @@
-# Neatio Validator Dashboard
+# Neatio Verifiers Dashboard
 
-> Neatio Validator Dashboard
+> Neatio Verifiers Dashboard
 
 ## Build Setup
 
