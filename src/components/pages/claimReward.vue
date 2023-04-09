@@ -14,7 +14,7 @@
            Please Unlock Your MetaMask wallet!
            </div>
          <div class="wallet-address" v-show="address != ''">
-              <span style="color:lightgrey" > Validator Address:</span> 
+              <span style="color:#496785" > Validator Address:</span> 
                <div class="address-title" v-show="address != ''">
               {{address}}
               </div>
@@ -24,7 +24,7 @@
            Please Unlock Your MetaMask wallet!
            </div>
          <div class="wallet-address" v-show="address != ''">
-              <span style="color:lightgrey" > Unclaimed rewards:</span> 
+              <span style="color:#496785" > Unclaimed rewards:</span> 
                <div class="rewards-title" v-show="address != ''">
               {{rewards}}
               </div>
@@ -288,12 +288,13 @@ button {
 
 .rewards-title {
   margin-bottom:5px;
-  color:#a6ff33;
+  color:#00ffff;
   margin-top:10px;
   width: 420px
 }
 
 .wallet-address {
+  font-family: Pirulen;
   margin-bottom:5px;
   margin-left: 148px;
   margin-top:10px;
@@ -330,7 +331,7 @@ button {
     font-weight:500;
     color: #00ffff;
     padding: 80px;  
-    font-family: Pirulen, Helvetica;
+    font-family: Pirulen !important;
  }
 
 
@@ -385,7 +386,7 @@ button {
     font-weight:240;
     color: #00ffff;
     margin: auto;
-    color: #a6ff33;
+    color: #00ffff;
 
 
  }
@@ -441,7 +442,7 @@ button {
     }
 
     #gtButton:hover {
-      background-color: #a6ff33;
+      background-color: #282343;
     }
 
 </style>

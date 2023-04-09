@@ -3,7 +3,7 @@
     <div class="nav-panel">
       <router-link tag="div" to="/" class="common-inline-block ii">
         <img
-          src="../../assets/logo-transparent.png"
+          src="../../assets/logo-new.png"
           alt="neatio logo"
           class="nav-logo logo-neatio common-inline-block"
         />
@@ -187,6 +187,7 @@ export default {
   height: auto;
   .nav-panel {
     text-align: left;
+    font-family: Pirulen;
     box-sizing: border-box;
     width: 1200px;
     margin: 0 auto;
@@ -199,7 +200,7 @@ export default {
       vertical-align: middle;
     }
     .ic {
-      margin-left: 10px;
+      font-size: 22px;
       width: 1100px;
       & a {
         margin-right: 15px;
@@ -331,7 +332,8 @@ export default {
       color:red;
     }
         .conColor2 {
-      color: #a6ff33;
+      color: #00ffff;
+      font-family: Computer;
     }
     .iv {
       height: 52px;

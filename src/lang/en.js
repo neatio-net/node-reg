@@ -1,6 +1,6 @@
 export default {
     newWallet: 'New Wallet',
-    walletInfo: 'NeatioVerifiers',
+    walletInfo: 'Neatio',
     mapping: 'Token Mapping',
     transfer: 'Transfer',
     contract: 'Contract',

@@ -38,7 +38,7 @@ export default {
   text-align: center;
   color: #00ffff;
   min-width: 1200px;
-  font-family: Helvetica;
+  font-family: Computer;
 }
 .main {
   background-image:  url('assets/hero-bk.jpg');

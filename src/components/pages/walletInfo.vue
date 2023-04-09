@@ -14,7 +14,7 @@
            Please Unlock Your MetaMask wallet!
            </div>
          <div class="wallet-address" v-show="address != ''">
-              <span style="color:lightgrey" > Validator Address:</span> 
+              <span style="color:#496785" > Validator Address:</span> 
                <div class="address-title" v-show="address != ''">
               {{address}}
               </div>
@@ -22,14 +22,14 @@
 
           <div class="balance-details" v-show="address != ''">
                    <div class="wallet-balance-available" v-show="address !== ''">
-           <span style="color:lightgrey">Available Balance:</span>  <span style="color:#a6ff33">{{fullbalance}}</span>  NEAT
+           <span style="color:#496785">Available Balance:</span>  <span style="color:#00ffff">{{fullbalance}}</span>  NEAT
           </div>
             <div class="wallet-balance-available">
-           <span style="color:lightgrey">Collateral Locked:</span> <span style="color:#a6ff33">{{staking}}</span>  NEAT 
+           <span style="color:#496785">Collateral Locked:</span> <span style="color:#00ffff">{{staking}}</span>  NEAT 
            <button class="rippleUnreg" @click="unRegister">unregister</button>
           </div>
             <div class="wallet-balance-available">
-           <span style="color:lightgrey">Unclaimed Rewards:</span> <span style="color:#a6ff33">{{rewards}}</span>  
+           <span style="color:#496785">Unclaimed Rewards:</span> <span style="color:#00ffff">{{rewards}}</span>  
            <router-link to="/claimReward"
                   ><button class="rippleClaim">claim</button></router-link
                 >
@@ -502,7 +502,7 @@ button {
     font-weight:240;
     color: #00ffff;
     margin: auto;
-    color: #a6ff33;
+    color: #00ffff;
 
 
  }
@@ -550,7 +550,7 @@ button {
     }
 
     #gtButton:hover {
-      background-color: #a6ff33;
+      background-color: #00ffff;
     }
 
 </style>
