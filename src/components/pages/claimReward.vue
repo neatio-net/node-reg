@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="dashboard" >
-      VALIDATOR DASHBOARD
+      VALIDATORS DASHBOARD
     </div>
     <div v-if="step == 1">    
 
