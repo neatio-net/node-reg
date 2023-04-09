@@ -5,7 +5,7 @@
                   href="https://neatio.net/pages/terms.html"
                   target="_blank"
                   rel="noopener"
-                  ><span style="color:#ddd">Terms</span></a> © 2022 Neatio</div>
+                  ><span style="color:#ddd">Terms</span></a> © 2023 Neatio</div>
 
       <div class="social">
         <ul>
@@ -38,7 +38,7 @@
               <!-- TWITTER -->
               <li class="">
                 <a
-                  href="https://twitter.com/neat_io"
+                  href="https://twitter.com/xNeatio"
                   target="_blank"
                   rel="noopener"
                   ><img
@@ -51,7 +51,7 @@
               <!-- FACEBOOK -->
               <li class="">
                 <a
-                  href="https://www.facebook.com/NeatioNet"
+                  href="https://www.facebook.com/neatio.net"
                   target="_blank"
                   rel="noopener"
                   ><img
