@@ -80,7 +80,6 @@ export default {
       privateKey: "",
       nodePublicKey: "",
       nodePrivateKey: "",
-      commission: 15,
       staking:"",
       rewards:"",
       amount:"",

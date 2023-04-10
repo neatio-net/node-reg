@@ -261,7 +261,8 @@ export default {
       if (
         isNaN(this.commission) ||
         Math.floor(this.commission) !== this.commission ||
-        this.commission !== 15
+        this.commission > 100 ||
+        this.commission < 1
       ) {
         this.info("error", this.$t("errCommission"));
         return;
