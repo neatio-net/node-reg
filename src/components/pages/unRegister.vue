@@ -52,9 +52,6 @@
               placeholder="Gas Price"
             ></el-input>
           </div>
-          <!-- <div class="item">
-                        <el-button @click="dialogVisible=true" class="dnk" type="danger">{{$t('walletInfo.dnk')}}</el-button>
-          </div>-->
         </div>
         <el-button @click="sendTx" class="gt" type="danger">{{
           $t("gt")

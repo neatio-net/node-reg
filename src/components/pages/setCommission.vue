@@ -28,22 +28,6 @@
               v-model="balance"
             ></el-input>
           </div>
-<!--          <div class="item">-->
-<!--            <p style="font-size: 14px">Public key</p>-->
-<!--            <el-input-->
-<!--              style="width: 420px"-->
-<!--              v-model="nodePublicKey"-->
-<!--              placeholder="Public key"-->
-<!--            ></el-input>-->
-<!--          </div>-->
-<!--          <div class="item">-->
-<!--            <p style="font-size: 14px">Private key</p>-->
-<!--            <el-input-->
-<!--              style="width: 420px"-->
-<!--              v-model="nodePrivateKey"-->
-<!--              placeholder="Private key"-->
-<!--            ></el-input>-->
-<!--          </div>-->
           <div class="item">
             <p style="font-size: 14px">Commission</p>
             <el-input
