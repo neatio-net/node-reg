@@ -280,7 +280,8 @@ button {
 
 .address-title {
   margin-bottom:5px;
- 
+  font-family: Computer;
+  font-size: 20px;
   margin-top:10px;
   width: 420px
 }
@@ -288,6 +289,8 @@ button {
 .rewards-title {
   margin-bottom:5px;
   color:#00ffff;
+  font-family: Computer;
+  font-size: 20px;
   margin-top:10px;
   width: 420px
 }
