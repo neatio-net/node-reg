@@ -276,9 +276,9 @@ export default {
         return;
       }
 
-      if (this.price < 0.0000005) {
-        this.price = '0.0000005'
-      }
+      // if (this.price < 0.0000005) {
+      //   this.price = '0.0000005'
+      // }
 
       if (this.limit < 21000) {
         this.info("error", this.$t("errLimitLess"));
@@ -309,12 +309,12 @@ export default {
         [this.nodePublicKey, signature, this.commission]
       );
 
-
+       
       const params = [
         {
           from: this.address,
           to: "0x0000000000000000000000000000000000000505",
-          gas: Utils.toHex(this.limit),
+          gas: this.limit,
           gasPrice: this.price,
           value: Utils.toHex(Utils.fromNEAT(this.amount)),
           data: contractMethod + data.substring(2)
@@ -341,6 +341,9 @@ export default {
           console.log('tx error', error)
         });
     },
+
+
+    
     // UNREGISTER
     async unRegister() {
         let contractMethod = neatioapi.abi.methodID("UnRegister", []);
