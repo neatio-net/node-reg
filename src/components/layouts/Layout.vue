@@ -21,7 +21,7 @@
 
 <style lang="scss">
   .layout {
-    background-color: #f9f9f9;
+    background: linear-gradient(to left, #24243e, #302b63, #24243e);
     .main {
     margin: 0px auto;
    	height: 100vh;
