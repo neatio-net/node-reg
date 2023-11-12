@@ -41,36 +41,32 @@ export default {
   font-family: Computer;
 }
 .main {
-  background-image:  url('assets/hero-bk.jpg');
-  background-blend-mode: multiply;
-  background-color: #2c3e50;
+  /* background-image:  url('assets/hero-bk.jpg'); #24243e, #302b63, #24243e*/
+  /* background-blend-mode: multiply; */
+  background: linear-gradient(to left, #24243e, #302b63, #24243e);
+  /* background-color: #2c3e50; */
   background-size: cover;
 
 }
 
+.boxe {
+  margin: 60px;
+}
 .box1 {
   width: 1200px;
   height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-style: solid;
   border-width: 1px;
-  border-color: azure;
-  background: #000;
+  background: transparent;
   display: flex;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   margin: 0px auto 0px auto;
   position: relative;
   text-align: left;
-
-  box-sizing: 1px;
-  
   box-sizing: 1px;
   border: none;
-  border: 1px solid #00ffffa4;
-
-  box-shadow: 0 0 40px #00bfff31;
+  box-shadow: 0 0 60px #000;
   
 }
 
@@ -80,18 +76,14 @@ export default {
   padding-bottom: 50px;
   border-style: solid;
   border-width: 1px;
-  border-color: azure;
-  background: #191c20;
+  background: transparent;
   margin: 0px auto 0px auto;
   position: relative;
   text-align: left;
   box-sizing: 1px;
   border: none;
-  border: 1px solid #00ffffa4;
-
-  box-shadow: 0 0 40px #00bfff31;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 60px #000;
+  border-radius: 10px;
 }
 
 
