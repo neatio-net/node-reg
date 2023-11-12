@@ -221,7 +221,7 @@ export default {
       const params = [
         {
           from: this.address,
-          to: "0x0000000000000000000000000000000000000505",
+          to: "0x0000000000000000000000000000000000001001",
           gas: Utils.toHex(this.limit),
           gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
           value: "0x0",
@@ -436,7 +436,7 @@ button {
       color: #000000;
       border: 1px solid #000;
       border-radius: 4px;
-      background-color: #00ffff;
+      background: linear-gradient(45deg, #a044ff, #46bbf4, #2472fc);
       font-size: 16px;
       cursor: pointer;
       margin: 0 auto;
