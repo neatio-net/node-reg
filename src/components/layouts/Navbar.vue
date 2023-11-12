@@ -38,7 +38,7 @@ export default {
       searchContent: "",
       otherSearch: "",
       currentChainId: '',
-      chainId: '0x203',
+      chainId: '0x3e9',
       testChainId: '0x20d',
       address: '',
       blockchainList: [
@@ -115,7 +115,7 @@ export default {
           this.connectAccount();
         } else {
           
-          this.address = `⦿ Neatio Mainnet`
+          this.address = `⦿ Neatio`
         }
 
       } catch (e) {
@@ -135,10 +135,10 @@ export default {
       }
     },
         async switchToEtheruemChain () {
-          let chainIds = '0x203';
+          let chainIds = '0x3e9';
           let rpc = 'https://rpc.neatio.net';
           let browser = 'https://scan.neatio.net';
-          let chainName = 'Neatio Mainnet';
+          let chainName = 'Neatio';
 
           try {
             this.currentChainId = await ethereum.request({ method: 'eth_chainId' });
@@ -182,8 +182,10 @@ export default {
 
 <style lang="scss">
 .nav-container {
-  box-shadow: 0px 4px 8px 0px rgba(230, 230, 230, 0.6);
-  background-color: #001131;
+
+
+  background: #000000ad;
+
   height: auto;
   .nav-panel {
     text-align: left;
