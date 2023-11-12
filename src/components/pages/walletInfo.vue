@@ -1,14 +1,15 @@
 <template>
   <div class="main">
-    <div class="dashboard" >
-      VALIDATOR DASHBOARD
-    </div>
+
     <div v-if="step == 1">    
 
       <Access @unlock="unlock"></Access>
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
+<div>
 
+  
+</div>
      <div class="box1" >
            <div class="not-connected" v-show="address == ''">
            Please Unlock Your MetaMask wallet!
@@ -26,7 +27,7 @@
           </div>
             <div class="wallet-balance-available">
            <span style="color:#496785">Collateral Locked:</span> <span style="color:#00ffff">{{staking}}</span>  NEAT 
-           <button class="rippleUnreg" @click="unRegister">unregister</button>
+    
           </div>
             <div class="wallet-balance-available">
            <span style="color:#496785">Unclaimed Rewards:</span> <span style="color:#00ffff">{{rewards}}</span>  
@@ -59,15 +60,7 @@
               placeholder="Private key"
             >
           </div>
-           <div class="item">
-            <p style="font-size: 14px">Pool Commission (default 15%)</p>
-            <input class="inputs"
-              style="width: 420px;background-color:#000"
-              v-model="commission"
-              placeholder="Commission"
-              
-            >
-          </div> 
+
           <div class="item">
             <p style="font-size: 14px">Amount to be locked</p>
             <input class="inputs"
@@ -76,11 +69,20 @@
               placeholder="Amount"
             >
           </div>
+          <div class="item2">
+            <p style="font-size: 14px" v-show="staking !== null">Please note that Neatio operates on a 24-hour epoch. Your node will 
+                become a Validator on the next which may take up to 24 hours.</p>
+              <button class="rippleReg" @click="registerValidator" v-show="staking !== null">{{ "REGISTER" }}</button>
+           
+              <p style="font-size: 14px" v-show="staking == null">Please note that Neatio operates on a 24-hour epoch. Your coins will
+               be available on the next which may take up to 24 hours.</p>
+               <button class="rippleUnreg"  @click="unRegister" v-show="staking == null">{{ "unREGISTER" }}</button>
+            </div>
+     
+   
         </div>
  
-        <div class="btn">
-          <button id="gtButton" @click="registerValidator">{{ "PROCEED" }}</button>
-        </div>
+
         
       </div>
     </div>
@@ -109,8 +111,8 @@ export default {
       privateKey: "",
       nodePublicKey: "",
       nodePrivateKey: "",
-      commission: 15,
-      staking:"",
+      commission: 50,
+      staking: null,
       rewards:"",
       amount:"",
       limit: "21000",
@@ -258,15 +260,15 @@ export default {
         this.nodePrivateKey = "0x" + this.nodePrivateKey;
       }
 
-      if (
-        isNaN(this.commission) ||
-        Math.floor(this.commission) !== this.commission ||
-        this.commission > 100 ||
-        this.commission < 1
-      ) {
-        this.info("error", this.$t("errCommission"));
-        return;
-      }
+      // if (
+      //   isNaN(this.commission) ||
+      //   Math.floor(this.commission) !== this.commission ||
+      //   this.commission > 100 ||
+      //   this.commission < 1
+      // ) {
+      //   this.info("error", this.$t("errCommission"));
+      //   return;
+      // }
       if (isNaN(this.limit) || this.limit <= 0) {
         this.info("error", this.$t("errLimit"));
         return;
@@ -285,10 +287,10 @@ export default {
         return;
       }
 
-      if (this.price > 0.000005) {
-        this.info("error", this.$t("errPriceBig"));
-        return;
-      }
+      // if (this.price > 0.000005) {
+      //   this.info("error", this.$t("errPriceBig"));
+      //   return;
+      // }
       
       let send = RPC(Url);
 
@@ -299,21 +301,20 @@ export default {
       ]);
 
       let signature = await send("neat_signAddress", [
-        this.address,
-        this.nodePrivateKey,
+        this.address, "0x" + this.nodePrivateKey,
       ]);
       
 
       let data = neatioapi.abi.encodeParams(
         ["bytes", "bytes", "uint8"],
-        [this.nodePublicKey, signature, this.commission]
+        ["0x" + this.nodePublicKey, signature, this.commission]
       );
 
        
       const params = [
         {
           from: this.address,
-          to: "0x0000000000000000000000000000000000000505",
+          to: "0x0000000000000000000000000000000000001001",
           gas: this.limit,
           gasPrice: this.price,
           value: Utils.toHex(Utils.fromNEAT(this.amount)),
@@ -350,7 +351,7 @@ export default {
               const params = [
         {
           from: this.address,
-          to: "0x0000000000000000000000000000000000000505",
+          to: "0x0000000000000000000000000000000000001001",
           gas: Utils.toHex(this.limit),
           gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
           value: "0x0",
@@ -398,7 +399,7 @@ button {
 	background-color: #24292f;
   border-radius: 4px;
 	outline: none;
-  margin: 0px 0px 0px 60px;
+
   }
   
 .info {
@@ -471,6 +472,23 @@ button {
 	center/15000%; 
   }
 
+  .rippleReg {
+  font-size: 16px;
+  min-width: 200px;
+  min-height: 40px;
+	background-position: center;
+	transition: background 0.4s;
+  /* float: right; */
+ 
+  }
+
+  .rippleReg:hover {
+  color: #000;  
+	text-transform: uppercase;
+	background: #00ffff radial-gradient(circle, transparent 1%, #00ffff 1%) 
+	center/15000%; 
+  }
+
   .ripple:active {
 	background-color: #00ffff;
 	background-size: 100%;
@@ -478,12 +496,14 @@ button {
   }
 
   .rippleUnreg {
-  font-size: 12px;
-  min-width: 100px;
+  font-size: 14px;
+  min-width: 160px;
+  min-height: 48px;
   color: #00ffff;
 	background-position: center;
 	transition: background 0.4s;
-  float: right;
+  vertical-align: top;
+  /* float: left; */
  
   }
 
@@ -510,10 +530,11 @@ button {
 
 
  }
-.neatio {
+.buttonss {
   display: inline-block;
-  font-size: 18px;
-  vertical-align: 5px;
+  margin: 0 auto;
+
+
 }
 .item {
   width: 540px;
